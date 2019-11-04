@@ -19,8 +19,9 @@ public class P10_Simon {
         System.out.printf("Welcome to the Simon game");
         int point;
         boolean pass=true;
+        //repeating by counting the points in the game
         for (point=0; pass ;point++){
-            pass=action(point+1);
+            pass=action(point+1);// you cannot have an array with zero elements
         }
         System.out.println("Wrong.");
         System.out.println("Congrats your score is : "+(point-1));
@@ -40,11 +41,11 @@ public class P10_Simon {
         System.out.println();
         for (int i=0;i<a.length;i++){
             System.out.print("  " + a[i]+"   ");
-            new P10_Simon().delay(500);
+            new P10_Simon().delay(500); // shows the  elements one by one slowly
         }
         System.out.println();
     }
-    //checks weather the iput is correct
+    //checks weather the input is correct
     public static boolean check(int[] a){
         Scanner sc =new Scanner(System.in);
 
@@ -66,6 +67,8 @@ public class P10_Simon {
         }
         return true;
     }
+
+    // it controls the main action of the game
     public static boolean action(int lv){
         System.out.println("A list of "+lv+" numbers will be presented.Memorise it : ");
         int[] a = new int[lv];
