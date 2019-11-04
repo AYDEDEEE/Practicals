@@ -44,7 +44,7 @@ public class P10_Simon {
         }
         System.out.println();
     }
-
+    //checks weather the iput is correct
     public static boolean check(int[] a){
         Scanner sc =new Scanner(System.in);
 
