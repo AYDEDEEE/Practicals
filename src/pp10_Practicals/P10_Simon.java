@@ -43,7 +43,7 @@ public class P10_Simon {
         System.out.println();
         for (int i=0;i<a.length;i++){
             System.out.print("  " + a[i]+"   ");
-            new P10_Simon().delay(500); // shows the  elements one by one slowly
+            //new P10_Simon().delay(500); // shows the  elements one by one slowly
         }
         System.out.println();
     }
@@ -76,7 +76,7 @@ public class P10_Simon {
         int[] a = new int[lv];
         a=arr(lv);
         print(a);
-        delay(100);
+        delay(2000);
         clearScreen();
         System.out.println("Now enter the numbers and separate them by space");
         boolean check = check(a);
@@ -85,10 +85,10 @@ public class P10_Simon {
 
 
     //clears the screen
-    public final static void clearScreen() {
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-    }
+    /*public static void clearScreen() {
+        System.out.print("\b\b\b\b\b");
+    }*/
 
+    public static void clearScreen(){System.out.print('\u000C');}
 
 }

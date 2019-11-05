@@ -22,7 +22,7 @@ public class P11_Mastermind_BikoveIkravi {
 
         char ans = 'n';
         ans = sc.next().charAt(0);
-        if (ans == 'y') {
+        if (ans == 'y' || ans == 'Y') {
             game();
         }
 
@@ -62,6 +62,13 @@ public class P11_Mastermind_BikoveIkravi {
         }
     }
 
+    public static void print(boolean a[]) {
+
+        for (int i=0;i<a.length;i++) {
+            System.out.print(a[i]);
+        }
+        System.out.println();
+    }
 
     public static boolean CHECKandMARK(String input, String code){
         //CHECKING PART
@@ -73,7 +80,7 @@ public class P11_Mastermind_BikoveIkravi {
             }
         }
         System.out.print("Your feedback:  ");
-       //MARKING PART
+        //MARKING PART
         //first we start with the pins *
         boolean[] c={false,false,false,false};
         boolean[] in={false,false,false,false};
@@ -82,17 +89,20 @@ public class P11_Mastermind_BikoveIkravi {
             if (input.charAt(i)==code.charAt(i)){
                 System.out.print("*");
                 c[i]=true;
-                in[i]=true;//we need that for the o's. Blacks is an array that makes a value unavailable once it was matched weather bull or cow it does not matter
+                in[i]=true;
                 count++;
                 if(count==4)return true;
             }
         }
-
+        /*System.out.println("Code is:");
+        print(c);
+        System.out.println("Input is:");
+        print(in);*/
         //now the o's
         for (int i=0;i<4;i++){
             if(!in[i]){
                 for(int j=0;j<4;j++){
-                    if(input.charAt(i)==code.charAt(j) && !c[j] ){
+                    if(Character.toString(input.charAt(i)).matches(code.substring(j,j+1)) && !c[j] && !in[i]){
                         System.out.print("o");
                         in[i]=true;
                         c[j]=true;
@@ -100,9 +110,13 @@ public class P11_Mastermind_BikoveIkravi {
                     }
                 }
             }
+            /*System.out.println("Code is:");
+            print(c);
+            System.out.println("Input is:");
+            print(in);*/
         }
         System.out.println();
-    return false;
+        return false;
 
     }
 

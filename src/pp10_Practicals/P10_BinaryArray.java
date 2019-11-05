@@ -20,7 +20,7 @@ public class P10_BinaryArray {
 		int[] a= new int[10];
 
 		for(int i=0;i<10;i++){
-			a[i]=rand.nextInt(22);
+			a[i]=rand.nextInt(500000);
 		}
 
 		//finding the largest number
@@ -60,7 +60,7 @@ public class P10_BinaryArray {
 
 		//binary length representation
 		int binlength=0;
-		for (int i=0;i>-4;i++){
+		for (int i=0;i>-4;i++){//run until otherwise
 			if(pow(2,i)>max){
 				binlength=i;
 				break;
