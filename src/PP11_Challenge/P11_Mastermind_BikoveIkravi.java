@@ -96,7 +96,7 @@ public class P11_Mastermind_BikoveIkravi {
                         System.out.print("o");
                         in[i]=true;
                         c[j]=true;
-                        
+
                     }
                 }
             }

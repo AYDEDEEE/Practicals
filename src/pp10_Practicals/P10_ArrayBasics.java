@@ -66,8 +66,7 @@ public class P10_ArrayBasics {
 		int i=0;
 		while(i<array.length) {
 			if(target==array[i]) {
-				return ++i;
-				
+				return i;
 			}
 			i++;
 		}
