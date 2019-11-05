@@ -6,14 +6,7 @@ import java.util.Scanner;
 public class P10_Simon {
 
 
-    //delay function
-    public void delay(int length){
-        try{
-            Thread.sleep( length );
-        }catch ( InterruptedException e ){
-            System.out.println ( "sleep interrupted!" );
-        }
-    }
+
 
     public static void main(String[] args) {
         System.out.printf("Welcome to the Simon game");
@@ -25,6 +18,15 @@ public class P10_Simon {
         }
         System.out.println("Wrong.");
         System.out.println("Congrats your score is : "+(point-1));
+    }
+
+    //delay function
+    public static void delay(int length){
+        try{
+            Thread.sleep( length );
+        }catch ( InterruptedException e ){
+            System.out.println ( "sleep interrupted!" );
+        }
     }
 
     //creates a random 1d array
@@ -74,7 +76,7 @@ public class P10_Simon {
         int[] a = new int[lv];
         a=arr(lv);
         print(a);
-        new P10_Simon().delay(100);
+        delay(100);
         clearScreen();
         System.out.println("Now enter the numbers and separate them by space");
         boolean check = check(a);
