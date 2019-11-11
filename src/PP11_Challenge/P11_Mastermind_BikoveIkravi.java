@@ -25,6 +25,7 @@ public class P11_Mastermind_BikoveIkravi {
         if (ans == 'y' || ans == 'Y') {
             game();
         }
+        
 
         System.out.println("Have a nice day!");
     }
