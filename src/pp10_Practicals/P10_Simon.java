@@ -89,6 +89,10 @@ public class P10_Simon {
         System.out.print("\b\b\b\b\b");
     }*/
 
-    public static void clearScreen(){System.out.print('\u000C');}
+    public static void clearScreen(){
+        for(int i=0;i<100;i++){
+            System.out.println();
+        }
+    }
 
 }
